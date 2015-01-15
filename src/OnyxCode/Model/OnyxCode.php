@@ -1,5 +1,5 @@
 <?php
-namespace Application\Model;
+namespace OnyxCode\Model;
 
 /**
  * Code model
@@ -35,7 +35,7 @@ namespace Application\Model;
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-class Code
+class OnyxCode
 {
 
     use \GetSet\SetterGetter;
@@ -45,6 +45,8 @@ class Code
     public $prize = null;
 
     public $code = null;
+    
+    public $sku_id = null;
 
     public $postdate = null;
 
@@ -98,6 +100,21 @@ class Code
                 )
             )
         ),
+        'sku_id' => array(
+            'required' => false,
+            'name' => 'sku_id',
+            'validators' => array(
+                array(
+                    'name' => 'not_empty'
+                ),
+                array(
+                    'name' => 'string_length',
+                    'options' => array(
+                        'min' => 1
+                    )
+                )
+            )
+        ),
         'postdate' => array(
             'required' => false,
             'name' => 'postdate',
@@ -137,6 +154,7 @@ class Code
         $this->id		= (isset($data["id"])) ? $data["id"] : $this->id;
         $this->prize		= (isset($data["prize"])) ? $data["prize"] : $this->prize;
         $this->code		= (isset($data["code"])) ? $data["code"] : $this->code;
+        $this->sku_id		= (isset($data["sku_id"])) ? $data["sku_id"] : $this->sku_id;
         $this->postdate		= (isset($data["postdate"])) ? $data["postdate"] : $this->postdate;
         $this->lastupdated		= (isset($data["lastupdated"])) ? $data["lastupdated"] : $this->lastupdated;
     }

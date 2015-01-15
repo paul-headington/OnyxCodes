@@ -1,5 +1,5 @@
 <?php
-namespace Application\Model;
+namespace OnyxCode\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 
@@ -37,7 +37,7 @@ use Zend\Db\TableGateway\TableGateway;
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-class CodeTable
+class OnyxCodeTable
 {
 
     public $tableGateway = null;
@@ -80,12 +80,13 @@ class CodeTable
      *
      * @id The primary key of the object
      */
-    public function save(Code $code)
+    public function save(OnyxCode $code)
     {
         $data = array(
         	'id' => $code->id,
         	'prize' => $code->prize,
         	'code' => $code->code,
+            'sku_id' => $code->sku_id,
         	'postdate' => $code->postdate,
         	'lastupdated' => $code->lastupdated,
 
