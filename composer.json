@@ -1,6 +1,6 @@
 {
-    "name": "paul-headington/OnyxPrize",
-    "keywords": ["Onyx", "prize disbersment module"],
+    "name": "paul-headington/OnyxCode",
+    "keywords": ["Onyx", "code generation module"],
 	"license": "MIT",
 	"require": {
 		"php": ">=5.4.0"

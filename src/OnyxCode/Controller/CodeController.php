@@ -1,13 +1,13 @@
 <?php
 
 
-namespace OnyxPrize\Controller;
+namespace OnyxCode\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Session\Container;
 
-class PrizeController extends AbstractActionController
+class CodeController extends AbstractActionController
 {
     protected $eventIdentifier = 'Onyx\Service\EventManger';
 

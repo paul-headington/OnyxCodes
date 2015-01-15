@@ -1,5 +1,5 @@
 <?php
-namespace OnyxPrize;
+namespace OnyxCode;
 
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;

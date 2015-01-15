@@ -2,7 +2,7 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'OnyxPrize\Controller\Prize' => 'OnyxPrize\Controller\PrizeController',
+            'OnyxCode\Controller\Code' => 'OnyxCode\Controller\CodeController',
         ),
     ),
     'view_manager' => array(
